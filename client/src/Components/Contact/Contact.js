@@ -76,7 +76,7 @@ function Contact() {
         setShakeTrigger(false);
       }, 600);
       try {
-        const response = await fetch("http://localhost:8000/contact-form", {
+        const response = await fetch("http://16.170.249.40/api/contact-form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
