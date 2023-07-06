@@ -71,6 +71,10 @@ function Contact() {
   const notify = async () => {
     if (doFormValidation()) {
       toast("Thanks for submitting the form !");
+      setShakeTrigger(true);
+      setTimeout(() => {
+        setShakeTrigger(false);
+      }, 600);
       try {
         const response = await fetch("http://localhost:8000/contact-form", {
           method: "POST",
@@ -98,10 +102,6 @@ function Contact() {
         });
       }
     }
-    setShakeTrigger(true);
-    setTimeout(() => {
-      setShakeTrigger(false);
-    }, 600);
   };
 
   const [form, setForm] = useState({

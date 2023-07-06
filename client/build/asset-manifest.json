@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.16ba2783.css",
-    "main.js": "./static/js/main.baaea7c1.js",
-    "static/js/998.4d9d329e.chunk.js": "./static/js/998.4d9d329e.chunk.js",
+    "main.css": "./static/css/main.9759d423.css",
+    "main.js": "./static/js/main.281bb518.js",
     "static/js/787.eb0d508a.chunk.js": "./static/js/787.eb0d508a.chunk.js",
     "static/media/pattern.svg": "./static/media/pattern.3061da83321405354a00308df2fc4b53.svg",
     "static/media/worldMap.svg": "./static/media/worldMap.6b212b15a110a7916c0bd8653a9b8b22.svg",
@@ -80,13 +79,12 @@
     "static/media/navOrbit_planet.svg": "./static/media/navOrbit_planet.94286a51d14ce7fb35d8dcad6755c530.svg",
     "static/media/Ellipse 6.svg": "./static/media/Ellipse 6.acb45a4c8587f93951c3d865dd90781c.svg",
     "static/media/globe 3.svg": "./static/media/globe 3.30dcc390f34936e934879a55be25110b.svg",
-    "main.16ba2783.css.map": "./static/css/main.16ba2783.css.map",
-    "main.baaea7c1.js.map": "./static/js/main.baaea7c1.js.map",
-    "998.4d9d329e.chunk.js.map": "./static/js/998.4d9d329e.chunk.js.map",
+    "main.9759d423.css.map": "./static/css/main.9759d423.css.map",
+    "main.281bb518.js.map": "./static/js/main.281bb518.js.map",
     "787.eb0d508a.chunk.js.map": "./static/js/787.eb0d508a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.16ba2783.css",
-    "static/js/main.baaea7c1.js"
+    "static/css/main.9759d423.css",
+    "static/js/main.281bb518.js"
   ]
 }

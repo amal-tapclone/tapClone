@@ -38,9 +38,11 @@ import { createPortal } from "react-dom";
 import worldMap from "../../assets/worldMap.svg";
 import useMediaQuery from "../../hook/useMediaQuery";
 import { TypeAnimation } from "react-type-animation";
-// import MobileNavbar from "./MobileNavbar";
-const MobileNavbar = lazy(() => import("./MobileNavbar"));
-const HeroCircle = lazy(() => import("./HeroCircle"));
+import MobileNavbar from "./MobileNavbar";
+import HeroCircle from "./HeroCircle";
+
+// const MobileNavbar = lazy(() => import("./MobileNavbar"));
+// const HeroCircle = lazy(() => import("./HeroCircle"));
 
 function HomeMain() {
   const navigate = useNavigate();
@@ -153,9 +155,7 @@ function HomeMain() {
   };
 
   // heroText oneAfter another animation
-  const [text2, setStartText2] = useState(false);
-  const [text3, setStartText3] = useState(false);
-  const [text4, setStartText4] = useState(false);
+  
   // const heroHeaders = ["Message 1", "Message 2", "Message 3", "Message 4"];
   // const [heroText1, setHeroText1] = useState("");
   // const [heroText2, setHeroText2] = useState("");
