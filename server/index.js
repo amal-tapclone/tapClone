@@ -46,6 +46,7 @@ app.use(
   })
 );
 app.post("/api/contact-form", async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
   console.log("kdjkf");
   let { name, email, message } = req.body;
 
