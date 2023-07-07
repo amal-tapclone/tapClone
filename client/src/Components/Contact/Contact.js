@@ -76,13 +76,16 @@ function Contact() {
         setShakeTrigger(false);
       }, 600);
       try {
-        const response = await fetch("http://16.170.249.40/api/contact-form", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
-        });
+        const response = await fetch(
+          "http://ec2-16-170-249-40.eu-north-1.compute.amazonaws.com/api/contact-form/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(form),
+          }
+        );
         const data = await response.json();
         setForm({
           name: "",
@@ -90,6 +93,7 @@ function Contact() {
           message: "",
         });
       } catch (error) {
+        console.log(error);
         toast.error(`${error.message}`, {
           position: "top-center",
           autoClose: 5000,

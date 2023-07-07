@@ -33,9 +33,18 @@ function send(data) {
     }
   });
 }
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authortization"
+  );
+  res.setHeader("Acces-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
+});
+
 app.use(cors());
 app.post("/api/contact-form", async (req, res) => {
-  console.log('kdfk')
+  console.log("kdfk");
   let { name, email, message } = req.body;
 
   const output = `<div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
@@ -48,7 +57,7 @@ app.post("/api/contact-form", async (req, res) => {
   const data = {
     from: "mailserviceSensRe@gmail.com",
     to: "amalc.plr@gmail.com",
-    subject: "TapClone GetIn Request",
+    subject: "TapClone GetIn Request",  
     html: output,
   };
 
