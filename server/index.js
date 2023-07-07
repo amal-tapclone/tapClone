@@ -6,7 +6,6 @@ require("dotenv").config();
 const nodemailer = require("nodemailer");
 const logger = require("morgan");
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -34,8 +33,9 @@ function send(data) {
     }
   });
 }
-
-app.post("/contact-form", async (req, res) => {
+app.use(cors());
+app.post("/api/contact-form", async (req, res) => {
+  console.log('kdfk')
   let { name, email, message } = req.body;
 
   const output = `<div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
