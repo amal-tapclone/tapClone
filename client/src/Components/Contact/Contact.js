@@ -78,7 +78,7 @@ function Contact() {
       try {
         const response = await fetch(
           // "http://localhost:8000/api/contact-form/",
-          "http://16.170.249.40:8000/api/contact-form/",
+          "http://16.170.249.40/api/contact-form/",
 
           {
             method: "POST",
