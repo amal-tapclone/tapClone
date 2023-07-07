@@ -33,18 +33,20 @@ function send(data) {
     }
   });
 }
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authortization"
-  );
-  res.setHeader("Acces-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
-});
+app.use(logger("dev"));
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "http://16.170.249.40",
+      "http://ec2-16-170-249-40.eu-north-1.compute.amazonaws.com",
+    ],
+    credentials: true,
+  })
+);
 app.post("/api/contact-form", async (req, res) => {
-  console.log("kdfk");
+  console.log("kdjkf");
   let { name, email, message } = req.body;
 
   const output = `<div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
@@ -57,14 +59,13 @@ app.post("/api/contact-form", async (req, res) => {
   const data = {
     from: "mailserviceSensRe@gmail.com",
     to: "amalc.plr@gmail.com",
-    subject: "TapClone GetIn Request",  
+    subject: "TapClone GetIn Request",
     html: output,
   };
 
-  send(data);
+  // send(data);
   res.status(200).send({ success: true });
 });
-app.use(logger("dev"));
 const port = 8000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

@@ -37,7 +37,6 @@ import button2 from "../../assets/svg/right arrow 2.svg";
 import { createPortal } from "react-dom";
 import worldMap from "../../assets/worldMap.svg";
 import useMediaQuery from "../../hook/useMediaQuery";
-import { TypeAnimation } from "react-type-animation";
 import MobileNavbar from "./MobileNavbar";
 import HeroCircle from "./HeroCircle";
 

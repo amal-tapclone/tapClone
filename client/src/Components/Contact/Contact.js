@@ -77,9 +77,12 @@ function Contact() {
       }, 600);
       try {
         const response = await fetch(
-          "http://ec2-16-170-249-40.eu-north-1.compute.amazonaws.com/api/contact-form/",
+          // "http://localhost:8000/api/contact-form/",
+          "http://16.170.249.40:8000/api/contact-form/",
+
           {
             method: "POST",
+            mode: "cors",
             headers: {
               "Content-Type": "application/json",
             },
@@ -87,6 +90,7 @@ function Contact() {
           }
         );
         const data = await response.json();
+        console.log(data);
         setForm({
           name: "",
           email: "",
